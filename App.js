@@ -15,7 +15,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator 
-          initialRouteName="CONTACT LIST" useLegacyImplementation 
+          initialRouteName="LOGIN" useLegacyImplementation 
           screenOptions = {styles.navigatorHeading}>
         <Drawer.Screen name="LOGIN" component={HomeScreen}/>
         <Drawer.Screen name="CONTACT LIST" component={StackNavigator} />

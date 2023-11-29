@@ -120,14 +120,4 @@ module.exports = StyleSheet.create({
   deleteText: {
      textAlign: "center",
   },
-  name: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  taskItem: {
-    marginTop: 30,
-  },
-  description: {
-    fontSize: 16,
-  },
 });
