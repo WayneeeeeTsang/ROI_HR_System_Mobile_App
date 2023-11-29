@@ -58,28 +58,6 @@ export default function CreateNewContact()
     }
   };
 
-  const deleteTask = (index) => {
-    return alert(
-      'Are you sure?',
-      'Are you sure you want to remove this task?',
-      [
-        // The "No" button
-        {
-          text: 'No',
-        },
-        // The "Yes" button
-        {
-          text: 'Yes',
-          onPress: () => {
-            let taskList = tasks.concat();
-            taskList.splice(index, 1);
-            setTasks(taskList);
-          },
-        },
-      ]
-    );
-  };
-
   return (
     <View style={styles.container}>
       <Text style={styles.pageTitle}>Enter New Employee Profile</Text>
@@ -123,17 +101,12 @@ export default function CreateNewContact()
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => (
           <View style={styles.taskItem}>
-            <Text style={styles.name}>{item.newID}</Text>
-            <Text style={styles.description}>{item.newName}</Text>
-            <Text style={styles.description}>{item.newDepartment}</Text>
-            <Text style={styles.description}>{item.newPhone}</Text>
-            <Text style={styles.description}>{item.newAddress}</Text>
-            <TouchableOpacity
-              key={index}
-              style={styles.deleteButton}
-              onPress={() => deleteTask(index)}>
-              <Text style={styles.deleteText}>-</Text>
-            </TouchableOpacity>
+            <Text style={styles.editContactTitle}>Employee ID: {item.newID}</Text>
+            <Text style={styles.editContactTitle}>Full Name: {item.newName}</Text>
+            <Text style={styles.editContactTitle}>Department ID: {item.newDepartment}</Text>
+            <Text style={styles.editContactTitle}>Phone: {item.newPhone}</Text>
+            <Text style={styles.editContactTitle}>Address: {item.newAddress}</Text>
+            <Text style={styles.editContactTitle}>New Profile has been added in</Text>
           </View>
         )}
       />
