@@ -36,7 +36,7 @@ module.exports = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
-  input: {
+    input: {
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,

@@ -7,8 +7,8 @@ export default function Settings({navigation}) {
   return (
     <View style={styles.container}>
       <Text>Setting Screen</Text>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contact')} >
-         <Text style={styles.buttonText}>Go to Contact Page</Text>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')} >
+         <Text style={styles.buttonText}>Go Home</Text>
       </TouchableOpacity>
     </View>
   );
